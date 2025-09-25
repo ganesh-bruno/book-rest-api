@@ -1,0 +1,19 @@
+meta {
+  name: get-book
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/api/books/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 087e199a-b48c-4121-8e0f-46ea1ca7671c
+}
+
+settings {
+  encodeUrl: true
+}

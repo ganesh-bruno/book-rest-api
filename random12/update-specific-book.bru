@@ -1,0 +1,27 @@
+meta {
+  name: update-specific-book
+  type: http
+  seq: 6
+}
+
+patch {
+  url: http://localhost:3000/api/books/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 94384c8b-dcc5-42ab-b719-e6135467e263
+}
+
+body:json {
+  {
+    "title":"API Client",
+    "author":"usebruno"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

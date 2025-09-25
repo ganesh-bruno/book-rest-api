@@ -1,0 +1,27 @@
+meta {
+  name: get-books
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:3000/api/books
+  body: none
+  auth: none
+}
+
+body:json {
+  {
+    "name":"Hello {{1}}"
+  }
+}
+
+assert {
+  res.status: eq 200
+  req.url: contains api/books
+  res.body[0].author: eq J.R.R. Tolkien
+}
+
+settings {
+  encodeUrl: true
+}
