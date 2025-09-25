@@ -2,7 +2,7 @@
 
 A simple REST API for managing a collection of books, built with Node.js and Express. This API provides full CRUD operations for book management with in-memory storage.
 
-## Features
+## Endpoints
 
 - **GET** `/api/books` - Retrieve all books
 - **GET** `/api/books/:id` - Get a specific book by ID
